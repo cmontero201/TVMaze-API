@@ -36,29 +36,29 @@ class Show extends Component {
                 <br />
                 <br />
                 <p>
-                    Average Rating: {(this.state.showData && this.state.showData.rating.average) || 'No Rating'}
+                    <span className = 'title'> Average Rating: </span> {(this.state.showData && this.state.showData.rating.average) || 'No Rating'}
                     <br />
                     <br/>
-                    Network: {(this.state.showData && this.state.showData.network && this.state.showData.network.name) || 'Not Specified'}
+                    <span className = 'title'> Network: </span> {(this.state.showData && this.state.showData.network && this.state.showData.network.name) || 'Not Specified'}
                     <br/>
                     <br/>
-                    Language: {(this.state.showData && this.state.showData.lanaguage) || 'Not Specified'}
+                    <span className = 'title'> Language: </span> {(this.state.showData && this.state.showData.lanaguage) || 'Not Specified'}
                     <br/>
                     <br/>
-                    Runtime: {(this.state.showData && this.state.showData.runtime) || 'Not Specified'}
+                    <span className = 'title'> Runtime: </span> {(this.state.showData && this.state.showData.runtime) || 'Not Specified'}
                     <br/>
                     <br/>
-                    Premiere Date: {(this.state.showData && this.state.showData.premiered) || 'Not Specified'}
+                    <span className = 'title'> Premiere Date: </span>  {(this.state.showData && this.state.showData.premiered) || 'Not Specified'}
                     <br/>
                     <br/>
-                    Genres:
                 </p>
+                <span className = 'title'> Genres: </span> 
                 <dl>
                     {(this.state.showData && this.state.showData.genres.map( (genre) => {
                         return <dt key = {genre}> {genre} </dt> })) || 'No Genre Specified'}
                 </dl>
                 <p>
-                    Summary:
+                    <span className = 'title'> Summary: </span> 
                     <br/>
                     {(this.state.showData && this.state.showData.summary && this.state.showData.summary.replace(regex, '')) || 'Not Specified'}
                 </p>
